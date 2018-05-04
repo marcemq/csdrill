@@ -1,6 +1,6 @@
 # Check if a substring characters are contained in another string
 # Example
-# INPUT: substr = ABCa, mystr = BDAECAa
+# INPUT: T = ABCa, S = BDAECAa
 # OUTPUT: ABCa IN BDAECAa
 
 import sys
@@ -24,4 +24,4 @@ def checkSubstrInStr(substr, mystr):
 
 if __name__ == "__main__":
     args = _setArgs()
-    checkSubstrInStr(args.substr, args.mystr)
+    checkSubstrInStr(args.T, args.S)
