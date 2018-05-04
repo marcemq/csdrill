@@ -1,14 +1,14 @@
-# Problem took from:
+# Problem taken from:
 # https://leetcode.com/problems/minimum-window-substring/description/
 # Example:
 # Input: S = "ADOBECODEBANC", T = "ABC"
 # Output: "BANC"
 
 import sys
-from utils import _setArgs, _getFrecFromT
+from utils import _setArgs, _getFrecFromStr
 
 def getMinWindow(S, T):
-    frec, counter = _getFrecFromT(T)
+    frec, counter = _getFrecFromStr(T)
     start, end, length = 0, 0, sys.maxsize
     ans = ""
     while end < len(S):
