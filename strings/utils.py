@@ -34,6 +34,13 @@ def _setConcatAllWordsArgs():
     parser.add_argument('-w', type=str, nargs='+', required=True, help=wH)
     return parser.parse_args()
 
+def _setOneStrInputArg():
+    """ Set menu to retrive one string input """
+    sH = "string to be computed"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", type=str, required=True, help=sH)
+    return parser.parse_args()
+
 def _getFrecFromStr(T):
     """
     Return:
