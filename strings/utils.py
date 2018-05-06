@@ -25,6 +25,15 @@ def _setAnagramArgs():
     parser.add_argument("-s", type=str, required=True, help=sH)
     return parser.parse_args()
 
+def _setConcatAllWordsArgs():
+    """ Set menu arguments for substr concatenation exercise """
+    sH = "string to be compared against"
+    wH = "list of words to be concatenated"
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-s", type=str, required=True, help=sH)
+    parser.add_argument('-w', type=str, nargs='+', required=True, help=wH)
+    return parser.parse_args()
+
 def _getFrecFromStr(T):
     """
     Return:
@@ -32,7 +41,17 @@ def _getFrecFromStr(T):
         counter (int): counter of unique chars in T
     """
     frec = {key:0 for key in T}
-    for key in frec:
+    for key in T:
         frec[key] += 1
     counter = len(frec)
     return frec, counter
+
+def _concatListStrs(words):
+    """
+    Return:
+        concatStr (str): a str concatenation from provided words list
+    """
+    concatStr = ""
+    for word in words:
+        concatStr += word
+    return concatStr
